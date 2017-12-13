@@ -3,7 +3,6 @@ package com.test.controller;
 import com.test.service.testService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;

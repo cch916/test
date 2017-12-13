@@ -1,9 +1,9 @@
 
 var test = function(){
-    $.get(url.test,function(data){
-        if(data.status == "1"){
-            $("body").append("<h2>"+data.test+"</h2>")
-        }
+
+    $.get(url.test, function(data){
+            $("body").append("<h2>" + data.username + "</h2>" + "<h2>" + data.password + "</h2>")
+
     });
 };
 

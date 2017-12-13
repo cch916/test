@@ -31,7 +31,7 @@
             })(jQuery);
 		
 		window.url = {
-				test : getAbsolutePath('/test/a')
+				test : getAbsolutePath('/test/test')
 				}
 
 })();

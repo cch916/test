@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- dao接口的路径 -->
+<mapper namespace="com.test.dao.userMapper">
+
+	<resultMap type="com.test.model.user" id="testMap">
+		<result property="username" column="username"></result>
+		<result property="password" column="password"></result>
+	</resultMap>
+
+	<select id="getList" resultMap="testMap">
+		SELECT * FROM test
+	</select>
+</mapper>

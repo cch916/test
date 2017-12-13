@@ -1,21 +1,31 @@
 package com.test.controller;
 
+import com.test.service.testService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.HashMap;
-import java.util.Map;
+
+import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/test")
 public class test {
-
-    @RequestMapping("/a")
-    public Map test(){
-        Map map=new HashMap();
-        map.put("status","1");
-        map.put("test","测试");
-        return map;
+    @Resource
+    private testService testService;
+    @RequestMapping("/test")
+    public List  test() {
+        List<test> list=new ArrayList();
+        try {
+            list = testService.getList();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return list;
     }
 
 
 }
+
+
+
